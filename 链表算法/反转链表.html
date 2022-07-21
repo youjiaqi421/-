@@ -10,11 +10,14 @@
      <script>
 
 var reverseList = function(head) {
-    let pre = null 
-    let curr = head 
+    let pre = null  // 虚拟节点返回引用
+    let curr = head // 定义头结点
     while(curr){
+    // 获取下个节点  
       const next = curr.next 
+    // 更改当前指针引用
       curr.next = pre
+    // 替换值  
       pre = curr  
       curr = next   
     }
